@@ -50,6 +50,12 @@ export default function TelaTemas() {
           <Text style={styles.sectionTitle}>DAS NAS SAN</Text>
         </View>
       </TouchableOpacity>
+
+      <TouchableOpacity onPress={() => navigation.navigate("Randomizer")}>
+        <View style={[{ backgroundColor: "plum", marginBottom: 20 }]}>
+          <Text style={styles.sectionTitle}>Randomizer</Text>
+        </View>
+      </TouchableOpacity>
       
     </ScrollView>
   );

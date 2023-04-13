@@ -22,6 +22,7 @@ import TelaPraticasServicoITIL from "./telasITIL/TelaPraticasServicoITIL";
 import TelaPraticasTecnicasITIL from "./telasITIL/TelaPraticasTecnicasITIL";
 import TelaPrincipiosITIL from "./telasITIL/TelaPrincipiosITIL";
 import TelaCadeiaITIL from "./telasITIL/TelaCadeiaITIL";
+import TelaRandomizerGOF from "./telas/TelaRandomizerGOF";
 
 const Stack = createNativeStackNavigator();
 
@@ -96,6 +97,13 @@ export default function App() {
           component={TelaDescricaoGOF}
           options={({ route }) => ({ title: route.params.nomeGOF })}
         />
+
+        <Stack.Screen
+          name="Randomizer"
+          component={TelaRandomizerGOF}
+          options={{ title: "Randomizer GOF" }}
+        />
+
       </Stack.Navigator>
     </NavigationContainer>
   );
