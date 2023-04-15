@@ -23,6 +23,8 @@ import TelaPraticasTecnicasITIL from "./telasITIL/TelaPraticasTecnicasITIL";
 import TelaPrincipiosITIL from "./telasITIL/TelaPrincipiosITIL";
 import TelaCadeiaITIL from "./telasITIL/TelaCadeiaITIL";
 import TelaRandomizerGOF from "./telas/TelaRandomizerGOF";
+import InicioCobit from "./TelasCobit/InicioCobit";
+import RandomizadorITIL from "./telasITIL/RandomizadorITIL";
 
 const Stack = createNativeStackNavigator();
 
@@ -99,11 +101,22 @@ export default function App() {
         />
 
         <Stack.Screen
-          name="Randomizer"
+          name="RandomizerGOF"
           component={TelaRandomizerGOF}
           options={{ title: "Randomizer GOF" }}
         />
 
+        <Stack.Screen
+          name="RandomizerITIL"
+          component={RandomizadorITIL}
+          options={{ title: "Randomizador ITIL 4" }}
+        />
+
+        <Stack.Screen
+          name="Cobit"
+          component={InicioCobit}
+          options={{ title: "COBIT 2019" }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

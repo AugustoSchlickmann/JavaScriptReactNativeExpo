@@ -1,4 +1,4 @@
-import { View, Text, ScrollView, StyleSheet, Button } from "react-native";
+import { View, Text, ScrollView, StyleSheet } from "react-native";
 import React from "react";
 
 export default function TelaPraticasServicoITIL() {
@@ -101,9 +101,9 @@ export default function TelaPraticasServicoITIL() {
           {"\n"} • Disponibilidade: A habilidade de um serviço de TI ou algum
           item de configuração de desempenhar sua função quando requerido.
           {"\n"}
-          {"\n"} • MTBF – Mean Time Between Failures
+          {"\n"} • MTBF Mean Time Between Failures
           {"\n"}
-          {"\n"} • MTRS – Mean Time To Restore Service
+          {"\n"} • MTRS Mean Time To Restore Service
         </Text>
       </View>
 
@@ -302,7 +302,9 @@ export default function TelaPraticasServicoITIL() {
           {"\n"}Testes de Serviço são aplicados em ambientes, plataformas ou
           serviços como um todo, além disso, podem ser de diversos tipos, com
           caráter técnico:
-          {"\n"}{"\n"}•teste de unidade {"\n"}•regressão {"\n"}•integração {"\n"}•sistema
+          {"\n"}
+          {"\n"}•teste de unidade {"\n"}•regressão {"\n"}•integração {"\n"}
+          •sistema
           {"\n"}•etc...
         </Text>
       </View>

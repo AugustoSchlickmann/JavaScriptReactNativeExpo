@@ -4,10 +4,15 @@ import React from 'react'
 const TelaDescricaoGOF = ({route}) => {
     
   return (
+    <>
+    <View style={[styles.caixa, { backgroundColor: "powderblue"}]}>
+    <Text style ={styles.red}>{route.params.tipoGOF}</Text>
+    </View>
     <View style={[styles.caixa, { backgroundColor: "plum"}]}>
       <Text style ={styles.red}>{route.params.palavrachaveGOF}</Text>
       <Text style ={styles.sectionDescription}>{route.params.descricaoGOF}</Text>
     </View>
+    </>
   )
 }
 

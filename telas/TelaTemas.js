@@ -21,39 +21,15 @@ export default function TelaTemas() {
         </View>
       </TouchableOpacity>
 
-      <TouchableOpacity >
-        <View style={[{ backgroundColor: "teal", marginVertical: 20 }]}>
+      <TouchableOpacity onPress={() => navigation.navigate("Cobit")} >
+      <View style={[styles.caixa, { backgroundColor: "crimson",  }]}>
           <Text style={styles.sectionTitle}>Cobit 2019</Text>
         </View>
       </TouchableOpacity>
 
       <TouchableOpacity onPress={() => navigation.navigate("Padroes GOF")}>
-        <View style={[styles.caixa, { backgroundColor: "rosybrown", marginBottom: 20 }]}>
+        <View style={[styles.caixa, { backgroundColor: "rosybrown",  }]}>
           <Text style={styles.sectionTitle}>Design Patterns GOF</Text>
-        </View>
-      </TouchableOpacity>
-
-      <TouchableOpacity>
-        <View style={[{ backgroundColor: "powderblue", marginBottom: 20 }]}>
-          <Text style={styles.sectionTitle}>Redes</Text>
-        </View>
-      </TouchableOpacity>
-
-      <TouchableOpacity>
-        <View style={[{ backgroundColor: "powderblue", marginBottom: 20 }]}>
-          <Text style={styles.sectionTitle}>RAID</Text>
-        </View>
-      </TouchableOpacity>
-
-      <TouchableOpacity>
-        <View style={[{ backgroundColor: "powderblue", marginBottom: 20 }]}>
-          <Text style={styles.sectionTitle}>DAS NAS SAN</Text>
-        </View>
-      </TouchableOpacity>
-
-      <TouchableOpacity onPress={() => navigation.navigate("Randomizer")}>
-        <View style={[{ backgroundColor: "plum", marginBottom: 20 }]}>
-          <Text style={styles.sectionTitle}>Randomizer</Text>
         </View>
       </TouchableOpacity>
       

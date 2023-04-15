@@ -2,13 +2,14 @@ import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
 
-const ComponentePadraoGOF = ({ titulo, descricao, palavrachave, }) => {
+const ComponentePadraoGOF = ({ tipo, titulo, descricao, palavrachave, }) => {
   const navigation = useNavigation();
 
   return (
     <TouchableOpacity
       onPress={() =>
         navigation.navigate("Descricao", {
+          tipoGOF: tipo,
           nomeGOF: titulo,
           descricaoGOF: descricao,
           palavrachaveGOF: palavrachave,

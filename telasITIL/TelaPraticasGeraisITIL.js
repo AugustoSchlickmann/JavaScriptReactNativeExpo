@@ -1,14 +1,7 @@
-import {
-  View,
-  Text,
-  ScrollView,
-  StyleSheet,
-} from "react-native";
+import { View, Text, ScrollView, StyleSheet } from "react-native";
 import React from "react";
 
-
 export default function TelaPraticasGeraisITIL() {
- 
   return (
     <ScrollView
       backgroundColor="white"
@@ -80,8 +73,8 @@ export default function TelaPraticasGeraisITIL() {
           Estabelece e reforça vínculos entre uma organização e as respectivas
           partes interessadas em níveis estratégicos e táticos.{"\n"}
           {"\n"} Inclui a identificação de stakeholders, o monitoramento da
-          relação e a melhoria contínua do relacionamento. {"\n"}Ela assegura que:{" "}
-          {"\n"}
+          relação e a melhoria contínua do relacionamento. {"\n"}Ela assegura
+          que: {"\n"}
           {"\n"}• As necessidades dos stakeholders são conhecidas;{"\n"} • Os
           serviços são priorizados corretamente; {"\n"}• Existe alta satisfação
           de clientes;{"\n"} • Reclamações em nível tático e/ou estratégico são
@@ -214,12 +207,15 @@ export default function TelaPraticasGeraisITIL() {
         <Text style={styles.purple}>Melhoria Contínua</Text>
         <Text style={styles.sectionDescription}>
           Alinhar as práticas e serviços da organização às necessidades de
-          negócio em constante mudança.{"\n"}{"\n"} Melhorar Produtos, Serviços, Práticas ou
-          qualquer elemento envolvido no gerenciamento de serviços.{"\n"}{"\n"} São exemplos
-          de atividades típicas da prática melhoria contínua:{"\n"}{"\n"} • Identificar
-          oportunidades de melhoria; {"\n"}• Fazer um plano para a implementação de
-          melhorias; {"\n"}• Medir e avaliar os resultados de melhoria; {"\n"}• Coordenar
-          atividades de melhoria na organização.
+          negócio em constante mudança.{"\n"}
+          {"\n"} Melhorar Produtos, Serviços, Práticas ou qualquer elemento
+          envolvido no gerenciamento de serviços.{"\n"}
+          {"\n"} São exemplos de atividades típicas da prática melhoria
+          contínua:{"\n"}
+          {"\n"} • Identificar oportunidades de melhoria; {"\n"}• Fazer um plano
+          para a implementação de melhorias; {"\n"}• Medir e avaliar os
+          resultados de melhoria; {"\n"}• Coordenar atividades de melhoria na
+          organização.
         </Text>
       </View>
     </ScrollView>

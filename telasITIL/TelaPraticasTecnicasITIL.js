@@ -58,11 +58,13 @@ export default function TelaPraticasTecnicasITIL() {
           {"\n"}Esta prática apresenta 4 tipos de implantação, são eles:
           {"\n"}
           {"\n"}• Phased: Os componentes são implantados por fases, em apenas
-          parte do ambiente de produção.{"\n"}{"\n"}• Big Bang: Os componentes são
-          implantados em todos os alvos de uma única vez.{"\n"}{"\n"}• Continuous: Os
-          componentes são integrados, testados e implantados sempre que
-          necessário.{"\n"}{"\n"}• Pull: Os componentes são disponibilizados em um
-          repositório e os usuários fazem o download quando escolherem.
+          parte do ambiente de produção.{"\n"}
+          {"\n"}• Big Bang: Os componentes são implantados em todos os alvos de
+          uma única vez.{"\n"}
+          {"\n"}• Continuous: Os componentes são integrados, testados e
+          implantados sempre que necessário.{"\n"}
+          {"\n"}• Pull: Os componentes são disponibilizados em um repositório e
+          os usuários fazem o download quando escolherem.
         </Text>
       </View>
     </ScrollView>

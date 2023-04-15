@@ -48,6 +48,14 @@ export default function TelaPraticasITIL() {
           </Text>
         </View>
       </TouchableOpacity>
+
+      <TouchableOpacity onPress={() => navigation.navigate("RandomizerITIL")}>
+        <View style={[styles.caixa, { backgroundColor: "plum" }]}>
+          <Text style={styles.purple}>Randomizador</Text>
+        </View>
+      </TouchableOpacity>
+
+
     </ScrollView>
   );
 }
