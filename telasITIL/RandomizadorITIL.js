@@ -99,7 +99,14 @@ export default function RandomizerITIL() {
       ></Button>
 
       <Text
-        style={[{ backgroundColor: "pink", textAlign: "center", fontSize: 20, marginHorizontal:4 }]}
+        style={[
+          {
+            backgroundColor: "pink",
+            textAlign: "center",
+            fontSize: 20,
+            marginHorizontal: 4,
+          },
+        ]}
       >
         {questao}
       </Text>
@@ -118,7 +125,6 @@ export default function RandomizerITIL() {
                 listaTodasPraticas,
                 Math.floor(Math.random() * 2)
               );
-              console.log(Math.floor(Math.random() * 2));
             }}
           >
             <View

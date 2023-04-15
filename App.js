@@ -1,12 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import {
-  StyleSheet,
-  Text,
-  ViewSafeAreaView,
-  ScrollView,
-  View,
-  Button,
-} from "react-native";
+import { StyleSheet } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import TelaTemas from "./telas/TelaTemas";
@@ -23,8 +16,11 @@ import TelaPraticasTecnicasITIL from "./telasITIL/TelaPraticasTecnicasITIL";
 import TelaPrincipiosITIL from "./telasITIL/TelaPrincipiosITIL";
 import TelaCadeiaITIL from "./telasITIL/TelaCadeiaITIL";
 import TelaRandomizerGOF from "./telas/TelaRandomizerGOF";
-import InicioCobit from "./TelasCobit/InicioCobit";
 import RandomizadorITIL from "./telasITIL/RandomizadorITIL";
+import InicioCobit from "./TelasCobit/InicioCobit";
+import TelaPrincipiosCobit from "./telasCobit/TelaPrincipiosCobit";
+import TelaFatoresCobit from "./telasCobit/TelaFatoresCobit";
+import TelaComponentesCobit from "./telasCobit/TelaComponentesCobit";
 
 const Stack = createNativeStackNavigator();
 
@@ -116,6 +112,23 @@ export default function App() {
           name="Cobit"
           component={InicioCobit}
           options={{ title: "COBIT 2019" }}
+        />
+
+        <Stack.Screen
+          name="TelaPrincipiosCobit"
+          component={TelaPrincipiosCobit}
+          options={{ title: "Princípios Cobit 2019" }}
+        />
+        <Stack.Screen
+          name="TelaComponentesCobit"
+          component={TelaComponentesCobit}
+          options={{ title: "Componentes de Governança" }}
+        />
+
+        <Stack.Screen
+          name="TelaFatoresCobit"
+          component={TelaFatoresCobit}
+          options={{ title: "Fatores de Projeto" }}
         />
       </Stack.Navigator>
     </NavigationContainer>
