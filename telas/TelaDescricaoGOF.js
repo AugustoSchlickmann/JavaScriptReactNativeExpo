@@ -1,10 +1,11 @@
-import { View, Text, StyleSheet,} from 'react-native'
+import { View, Text, StyleSheet,ScrollView} from 'react-native'
 import React from 'react'
 
 const TelaDescricaoGOF = ({route}) => {
     
   return (
     <>
+    <ScrollView contentInsetAdjustmentBehavior="automatic">
     <View style={[styles.caixa, { backgroundColor: "powderblue"}]}>
     <Text style ={styles.red}>{route.params.tipoGOF}</Text>
     </View>
@@ -12,6 +13,7 @@ const TelaDescricaoGOF = ({route}) => {
       <Text style ={styles.red}>{route.params.palavrachaveGOF}</Text>
       <Text style ={styles.sectionDescription}>{route.params.descricaoGOF}</Text>
     </View>
+    </ScrollView>
     </>
   )
 }

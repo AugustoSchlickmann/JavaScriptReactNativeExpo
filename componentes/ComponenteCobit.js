@@ -2,16 +2,34 @@ import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
 
-const ComponenteCobit = ({ tipo, nome, descricao }) => {
+const ComponenteCobit = ({ tipo, nome, descricao, descricaoDetalhada }) => {
   const navigation = useNavigation();
 
   return (
-    <TouchableOpacity>
-      <View style={[styles.caixa, { backgroundColor: "plum" }]}>
-        <Text style={styles.sectionTitle}>{nome}</Text>
-        <Text style={styles.sectionDescription}>{descricao}</Text>
-      </View>
-    </TouchableOpacity>
+    <>
+      {descricaoDetalhada ? (
+        <TouchableOpacity onPress={() =>
+          navigation.navigate("Descricao", {
+            tipoGOF: descricao,
+            nomeGOF: "Fator de Projeto",
+            descricaoGOF: descricaoDetalhada,
+            palavrachaveGOF: nome,
+          })
+        }>
+          <View style={[styles.caixa, { backgroundColor: "plum" }]}>
+            <Text style={styles.sectionTitle}>{nome}</Text>
+            <Text style={styles.sectionDescription}>{descricao}</Text>
+          </View>
+        </TouchableOpacity>
+      ) : (
+        
+          <View style={[styles.caixa, { backgroundColor: "plum" }]}>
+            <Text style={styles.sectionTitle}>{nome}</Text>
+            <Text style={styles.sectionDescription}>{descricao}</Text>
+          </View>
+        
+      )}
+    </>
   );
 };
 
@@ -19,7 +37,7 @@ export default ComponenteCobit;
 
 const styles = StyleSheet.create({
   sectionTitle: {
-    color: "red",
+    color: "purple",
     fontWeight: "bold",
     fontSize: 25,
     textAlign: "center",

@@ -3,7 +3,6 @@ import {
   Text,
   ScrollView,
   StyleSheet,
-  Image,
   TouchableOpacity,
 } from "react-native";
 import React from "react";
@@ -15,7 +14,15 @@ export default function TelaPraticasITIL() {
       backgroundColor="white"
       contentInsetAdjustmentBehavior="automatic"
     >
-      <TouchableOpacity onPress={() => navigation.navigate("PraticasGeraisITIL")}>
+      <TouchableOpacity onPress={() => navigation.navigate("RandomizerITIL")}>
+        <View style={[styles.caixa, { backgroundColor: "plum" }]}>
+          <Text style={styles.purple}>Randomizador</Text>
+        </View>
+      </TouchableOpacity>
+
+      <TouchableOpacity
+        onPress={() => navigation.navigate("PraticasGeraisITIL")}
+      >
         <View style={[styles.caixa, { backgroundColor: "plum" }]}>
           <Text style={styles.purple}>Gerais</Text>
           <Text style={styles.sectionDescription}>
@@ -27,7 +34,9 @@ export default function TelaPraticasITIL() {
         </View>
       </TouchableOpacity>
 
-      <TouchableOpacity onPress={() => navigation.navigate("PraticasServicoITIL")}>
+      <TouchableOpacity
+        onPress={() => navigation.navigate("PraticasServicoITIL")}
+      >
         <View style={[styles.caixa, { backgroundColor: "plum" }]}>
           <Text style={styles.purple}>Serviços</Text>
           <Text style={styles.sectionDescription}>
@@ -38,7 +47,9 @@ export default function TelaPraticasITIL() {
         </View>
       </TouchableOpacity>
 
-      <TouchableOpacity onPress={() => navigation.navigate("PraticasTecnicoITIL")}>
+      <TouchableOpacity
+        onPress={() => navigation.navigate("PraticasTecnicoITIL")}
+      >
         <View style={[styles.caixa, { backgroundColor: "plum" }]}>
           <Text style={styles.purple}>Técnicos</Text>
           <Text style={styles.sectionDescription}>
@@ -48,14 +59,6 @@ export default function TelaPraticasITIL() {
           </Text>
         </View>
       </TouchableOpacity>
-
-      <TouchableOpacity onPress={() => navigation.navigate("RandomizerITIL")}>
-        <View style={[styles.caixa, { backgroundColor: "plum" }]}>
-          <Text style={styles.purple}>Randomizador</Text>
-        </View>
-      </TouchableOpacity>
-
-
     </ScrollView>
   );
 }

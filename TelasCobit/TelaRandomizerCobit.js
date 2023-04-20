@@ -1,26 +1,27 @@
 import {
-  ScrollView,
   StyleSheet,
   Text,
   TouchableOpacity,
   View,
+  ScrollView,
 } from "react-native";
 import React, { useState } from "react";
-import ITIL from "../modelos/ITIL";
 
-function createInitialTodos() {
-  const praticasSelecionados = [];
-  return praticasSelecionados;
+import Cobit from "../modelos/Cobit";
+
+function createInicials() {
+  const objetivosSelecionados = [];
+  return objetivosSelecionados;
 }
 
-const itil4 = new ITIL();
-const listaTodasPraticas = itil4.listaDePraticas();
+const cobit = new Cobit();
+const listaTodosObjetivos = cobit.objetivos();
 var resposta;
 
-export default function RandomizerITIL() {
+export default function TelaRandomizerCobit() {
   const [countAcertos, setCounterAcertos] = useState(0);
   const [countErros, setCounterErros] = useState(0);
-  const [praticasSelecionados, setAdded] = useState(createInitialTodos);
+  const [objetivosSelecionados, setAdded] = useState(createInicials);
   const [questao, setQuestao] = useState("Selecione o correto");
 
   function pick5RandomItem(selecionados, todos, tipoQuestao) {
@@ -63,14 +64,14 @@ export default function RandomizerITIL() {
     }
     setAdded([...embaralhado]);
     tipoQuestao % 2 == 0
-      ? setQuestao("Qual é a prática " + primeiroItem.tipo)
+      ? setQuestao("Qual faz parte do Domínio\n" + primeiroItem.tipo)
       : setQuestao(primeiroItem.descricao);
   }
 
   return (
     <>
       <ScrollView
-        backgroundColor="skyblue"
+        backgroundColor="powderblue"
         contentInsetAdjustmentBehavior="automatic"
       >
         <View
@@ -90,7 +91,6 @@ export default function RandomizerITIL() {
         <View
           style={[
             {
-              backgroundColor: "skyblue",
               flexDirection: "row",
               justifyContent: "space-evenly",
               padding: 24,
@@ -99,7 +99,7 @@ export default function RandomizerITIL() {
         >
           <TouchableOpacity
             onPress={() =>
-              pick5RandomItem(praticasSelecionados, listaTodasPraticas, 1)
+              pick5RandomItem(objetivosSelecionados, listaTodosObjetivos, 1)
             }
           >
             <View
@@ -123,7 +123,7 @@ export default function RandomizerITIL() {
 
           <TouchableOpacity
             onPress={() =>
-              pick5RandomItem(praticasSelecionados, listaTodasPraticas, 2)
+              pick5RandomItem(objetivosSelecionados, listaTodosObjetivos, 2)
             }
           >
             <View
@@ -149,7 +149,7 @@ export default function RandomizerITIL() {
         <Text
           style={[
             {
-              backgroundColor: "skyblue",
+              backgroundColor: "powderblue",
               textAlign: "center",
               fontSize: 24,
               paddingBottom: 16,
@@ -160,15 +160,15 @@ export default function RandomizerITIL() {
           {questao}
         </Text>
 
-        {praticasSelecionados.map((item, index) => (
+        {objetivosSelecionados.map((item, index) => (
           <TouchableOpacity
             onPress={() => {
               item == resposta
                 ? setCounterAcertos(countAcertos + 1)
                 : setCounterErros(countErros + 1);
               pick5RandomItem(
-                praticasSelecionados,
-                listaTodasPraticas,
+                objetivosSelecionados,
+                listaTodosObjetivos,
                 Math.floor(Math.random() * 2)
               );
             }}

@@ -24,22 +24,36 @@ export default function TelaRandomizerGOF() {
   const [padroesSelecionados, setAdded] = useState(createInitialTodos);
   const [questao, setQuestao] = useState("Selecione o correto");
 
-  function pick5RandomItem(selecionados, todos) {
+  function pick5RandomItem(selecionados, todos, tipoQuestao) {
     selecionados = [];
-    let firstroll = Math.floor(Math.random() * todos.length)
+    let firstroll = Math.floor(Math.random() * todos.length);
 
     let primeiroItem = todos[firstroll];
     resposta = primeiroItem;
     selecionados.push(primeiroItem);
 
-    for (let index = 0; index < 4; index++) {
-      let availableItems = todos.filter(
-        (item) => !selecionados.includes(item) && item.tipo != primeiroItem.tipo
-      );
+    if (tipoQuestao % 2 == 0) {
+      for (let index = 0; index < 4; index++) {
+        let availableItems = todos.filter(
+          (item) =>
+            !selecionados.includes(item) && item.tipo != primeiroItem.tipo
+        );
 
-      let randomIndex = Math.floor(Math.random() * availableItems.length);
-      let randomItem = availableItems[randomIndex];
-      selecionados.push(randomItem);
+        let randomIndex = Math.floor(Math.random() * availableItems.length);
+        let randomItem = availableItems[randomIndex];
+        selecionados.push(randomItem);
+      }
+    }else{
+      for (let index = 0; index < 4; index++) {
+        let availableItems = todos.filter(
+          (item) =>
+            !selecionados.includes(item)
+        );
+
+        let randomIndex = Math.floor(Math.random() * availableItems.length);
+        let randomItem = availableItems[randomIndex];
+        selecionados.push(randomItem);
+      }
     }
 
     //EMBARALHAR OS 5
@@ -50,7 +64,9 @@ export default function TelaRandomizerGOF() {
       selecionados.splice(randomIndex, 1);
     }
     setAdded([...embaralhado]);
-    setQuestao("Qual é o padrão " + primeiroItem.tipo);
+    tipoQuestao % 2 == 0
+    ? setQuestao("Qual é o padrão " + primeiroItem.tipo)
+    : setQuestao(primeiroItem.descricao);
   }
 
   return (
@@ -68,42 +84,97 @@ export default function TelaRandomizerGOF() {
         <Text style={[{ color: "red", fontSize: 20 }]}>{countErros}</Text>
         <Text style={[{ color: "green", fontSize: 20 }]}>{countAcertos}</Text>
       </View>
-      <Button
-        onPress={() => pick5RandomItem(padroesSelecionados, listaTodosPadroes)}
-        title="Randomizar"
-      ></Button>
+
+      <View
+        style={[
+          {
+            backgroundColor: "skyblue",
+            flexDirection: "row",
+            justifyContent: "space-evenly",
+            padding: 24,
+          },
+        ]}
+      >
+        <TouchableOpacity
+          onPress={() =>
+            pick5RandomItem(padroesSelecionados, listaTodosPadroes, 1)
+          }
+        >
+          <View
+            style={[{ borderRadius: 50, backgroundColor: "plum", padding: 16 }]}
+          >
+            <Text
+              style={[
+                {
+                  textAlign: "center",
+                  fontSize: 16,
+                },
+              ]}
+            >
+              Randomizar {"\n"}por Descrição
+            </Text>
+          </View>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          onPress={() =>
+            pick5RandomItem(padroesSelecionados, listaTodosPadroes, 2)
+          }
+        >
+          <View
+            style={[{ borderRadius: 50, backgroundColor: "plum", padding: 16 }]}
+          >
+            <Text
+              style={[
+                {
+                  textAlign: "center",
+                  fontSize: 16,
+                },
+              ]}
+            >
+              Randomizar {"\n"}por Tipo
+            </Text>
+          </View>
+        </TouchableOpacity>
+      </View>
 
       <Text
-        style={[{ backgroundColor: "pink", textAlign: "center", fontSize: 25 }]}
+        style={[
+          {
+            backgroundColor: "skyblue",
+            textAlign: "center",
+            fontSize: 24,
+            paddingBottom: 16,
+            paddingHorizontal:4,
+          },
+        ]}
       >
         {questao}
       </Text>
 
-     
-        <FlatList
-          style={[{ backgroundColor: "skyblue",}]}
-          data={padroesSelecionados}
-          renderItem={({ item }) => (
-            <TouchableOpacity
-              onPress={() => {
-                item.tipo == resposta.tipo
-                  ? setCounterAcertos(countAcertos + 1)
-                  : setCounterErros(countErros + 1);
-                pick5RandomItem(padroesSelecionados, listaTodosPadroes);
-              }}
+      <FlatList
+        style={[{ backgroundColor: "skyblue" }]}
+        data={padroesSelecionados}
+        renderItem={({ item }) => (
+          <TouchableOpacity
+            onPress={() => {
+              item == resposta
+                ? setCounterAcertos(countAcertos + 1)
+                : setCounterErros(countErros + 1);
+              pick5RandomItem(padroesSelecionados, listaTodosPadroes,Math.floor(Math.random() * 2));
+            }}
+          >
+            <View
+              style={[
+                styles.caixa,
+                { backgroundColor: "plum", borderRadius: 30 },
+              ]}
             >
-              <View
-                style={[
-                  styles.caixa,
-                  { backgroundColor: "plum", borderRadius: 30 },
-                ]}
-              >
-                <Text style={styles.blue}>{item.nome}</Text>
-              </View>
-            </TouchableOpacity>
-          )}
-        ></FlatList>
-      
+              <Text style={styles.blue}>{item.nome}</Text>
+            </View>
+          </TouchableOpacity>
+        )}
+      ></FlatList>
     </>
   );
 }

@@ -12,27 +12,28 @@ export default function TelaTemas() {
   const navigation = useNavigation();
 
   return (
-
-    <ScrollView  backgroundColor="lightgray" contentInsetAdjustmentBehavior="automatic">
-      
+    
+    <ScrollView
+      backgroundColor="lightgray"
+      contentInsetAdjustmentBehavior="automatic"
+    >
       <TouchableOpacity onPress={() => navigation.navigate("ITIL")}>
-        <View style={[styles.caixa, { backgroundColor: "yellowgreen"}]}>
+        <View style={[styles.caixa, { backgroundColor: "powderblue" }]}>
           <Text style={styles.sectionTitle}>ITIL 4</Text>
         </View>
       </TouchableOpacity>
 
-      <TouchableOpacity onPress={() => navigation.navigate("Cobit")} >
-      <View style={[styles.caixa, { backgroundColor: "crimson",  }]}>
+      <TouchableOpacity onPress={() => navigation.navigate("Cobit")}>
+        <View style={[styles.caixa, { backgroundColor: "skyblue" }]}>
           <Text style={styles.sectionTitle}>Cobit 2019</Text>
         </View>
       </TouchableOpacity>
 
       <TouchableOpacity onPress={() => navigation.navigate("Padroes GOF")}>
-        <View style={[styles.caixa, { backgroundColor: "rosybrown",  }]}>
+        <View style={[styles.caixa, { backgroundColor: "steelblue" }]}>
           <Text style={styles.sectionTitle}>Design Patterns GOF</Text>
         </View>
       </TouchableOpacity>
-      
     </ScrollView>
   );
 }

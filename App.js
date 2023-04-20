@@ -17,10 +17,9 @@ import TelaPrincipiosITIL from "./telasITIL/TelaPrincipiosITIL";
 import TelaCadeiaITIL from "./telasITIL/TelaCadeiaITIL";
 import TelaRandomizerGOF from "./telas/TelaRandomizerGOF";
 import RandomizadorITIL from "./telasITIL/RandomizadorITIL";
-import InicioCobit from "./TelasCobit/InicioCobit";
+import InicioCobit from "./telasCobit/InicioCobit";
 import TelaPrincipiosCobit from "./telasCobit/TelaPrincipiosCobit";
-import TelaFatoresCobit from "./telasCobit/TelaFatoresCobit";
-import TelaComponentesCobit from "./telasCobit/TelaComponentesCobit";
+import TelaRandomizerCobit from "./telasCobit/TelaRandomizerCobit";
 
 const Stack = createNativeStackNavigator();
 
@@ -117,18 +116,12 @@ export default function App() {
         <Stack.Screen
           name="TelaPrincipiosCobit"
           component={TelaPrincipiosCobit}
-          options={{ title: "Princípios Cobit 2019" }}
+          options={({ route }) => ({ title: route.params.titulo })}
         />
         <Stack.Screen
-          name="TelaComponentesCobit"
-          component={TelaComponentesCobit}
-          options={{ title: "Componentes de Governança" }}
-        />
-
-        <Stack.Screen
-          name="TelaFatoresCobit"
-          component={TelaFatoresCobit}
-          options={{ title: "Fatores de Projeto" }}
+          name="TelaRandomizerCobit"
+          component={TelaRandomizerCobit}
+          options={{ title: "Randomizer Cobit" }}
         />
       </Stack.Navigator>
     </NavigationContainer>

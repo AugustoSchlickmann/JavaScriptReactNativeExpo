@@ -1,23 +1,20 @@
 import { StyleSheet, Text, View, FlatList, ScrollView } from "react-native";
 import React from "react";
-import Cobit from "../modelos/Cobit";
 import ComponenteCobit from "../componentes/ComponenteCobit";
 
-export default function TelaPrincipiosCobit() {
+export default function TelaPrincipiosCobit({route}) {
     
-  const cobit = new Cobit();
-
-  const principios = cobit.principios();
 
   return (
     <ScrollView contentInsetAdjustmentBehavior="automatic">
-      {principios.map((item, index) => (
+      {route.params.lista.map((item, index) => (
         <View>
           <ComponenteCobit
             key={index}
-            tipo={index + 1 + " " + item.tipo}
+            tipo={item.tipo}
             nome={item.nome}
             descricao={item.descricao}
+            descricaoDetalhada={item.descricaoDetalhada}
           ></ComponenteCobit>
         </View>
       ))}

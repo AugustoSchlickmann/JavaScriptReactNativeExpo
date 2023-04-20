@@ -7,7 +7,7 @@ export default function TelaPraticasServicoITIL() {
       backgroundColor="white"
       contentInsetAdjustmentBehavior="automatic"
     >
-      <View style={[styles.caixa, { backgroundColor: "aquamarine" }]}>
+      <View style={[styles.caixa, { backgroundColor: "powderblue" }]}>
         <Text style={styles.purple}>Análise de Negócio</Text>
         <Text style={styles.sectionDescription}>
           Analisar as necessidades de negócio e recomendar soluções para
@@ -25,7 +25,7 @@ export default function TelaPraticasServicoITIL() {
         </Text>
       </View>
 
-      <View style={[styles.caixa, { backgroundColor: "aquamarine" }]}>
+      <View style={[styles.caixa, { backgroundColor: "powderblue" }]}>
         <Text style={styles.purple}>Projeto de Serviço</Text>
         <Text style={styles.sectionDescription}>
           Projetar produtos e serviços que sejam adequados ao propósito e ao uso
@@ -36,7 +36,7 @@ export default function TelaPraticasServicoITIL() {
         </Text>
       </View>
 
-      <View style={[styles.caixa, { backgroundColor: "aquamarine" }]}>
+      <View style={[styles.caixa, { backgroundColor: "powderblue" }]}>
         <Text style={styles.purple}>Gerenciamento de Nível de Serviço</Text>
         <Text style={styles.sectionDescription}>
           Define metas claras e baseadas no negócio para o desempenho dos
@@ -55,7 +55,7 @@ export default function TelaPraticasServicoITIL() {
         </Text>
       </View>
 
-      <View style={[styles.caixa, { backgroundColor: "aquamarine" }]}>
+      <View style={[styles.caixa, { backgroundColor: "powderblue" }]}>
         <Text style={styles.purple}>Gerenciamento de Catálogo de Serviço</Text>
         <Text style={styles.sectionDescription}>
           Além de propiciar uma única fonte de informação consistente sobre
@@ -79,7 +79,7 @@ export default function TelaPraticasServicoITIL() {
         </Text>
       </View>
 
-      <View style={[styles.caixa, { backgroundColor: "aquamarine" }]}>
+      <View style={[styles.caixa, { backgroundColor: "powderblue" }]}>
         <Text style={styles.purple}>
           Gerenciamento de Capacidade e Desempenho
         </Text>
@@ -93,7 +93,7 @@ export default function TelaPraticasServicoITIL() {
         </Text>
       </View>
 
-      <View style={[styles.caixa, { backgroundColor: "aquamarine" }]}>
+      <View style={[styles.caixa, { backgroundColor: "powderblue" }]}>
         <Text style={styles.purple}>Gerenciamento de Disponibilidade</Text>
         <Text style={styles.sectionDescription}>
           Garante que os serviços entreguem os níveis de disponibilidade
@@ -107,7 +107,7 @@ export default function TelaPraticasServicoITIL() {
         </Text>
       </View>
 
-      <View style={[styles.caixa, { backgroundColor: "aquamarine" }]}>
+      <View style={[styles.caixa, { backgroundColor: "powderblue" }]}>
         <Text style={styles.purple}>
           Gerenciamento da Continuidade do Serviço
         </Text>
@@ -134,7 +134,7 @@ export default function TelaPraticasServicoITIL() {
         </Text>
       </View>
 
-      <View style={[styles.caixa, { backgroundColor: "aquamarine" }]}>
+      <View style={[styles.caixa, { backgroundColor: "powderblue" }]}>
         <Text style={styles.purple}>Controle de Mudanças</Text>
         <Text style={styles.sectionDescription}>
           Garante que os riscos sejam devidamente avaliados, autoriza o
@@ -159,7 +159,7 @@ export default function TelaPraticasServicoITIL() {
         </Text>
       </View>
 
-      <View style={[styles.caixa, { backgroundColor: "aquamarine" }]}>
+      <View style={[styles.caixa, { backgroundColor: "powderblue" }]}>
         <Text style={styles.purple}>Gerenciamento de Ativos de TI</Text>
         <Text style={styles.sectionDescription}>
           Planejamento e gerenciamento do ciclo de vida completo de todos os
@@ -175,7 +175,7 @@ export default function TelaPraticasServicoITIL() {
         </Text>
       </View>
 
-      <View style={[styles.caixa, { backgroundColor: "aquamarine" }]}>
+      <View style={[styles.caixa, { backgroundColor: "powderblue" }]}>
         <Text style={styles.purple}>Gerenciamento de Configuração</Text>
         <Text style={styles.sectionDescription}>
           Garante que informações precisas e confiáveis sobre a configuração dos
@@ -193,7 +193,7 @@ export default function TelaPraticasServicoITIL() {
         </Text>
       </View>
 
-      <View style={[styles.caixa, { backgroundColor: "aquamarine" }]}>
+      <View style={[styles.caixa, { backgroundColor: "powderblue" }]}>
         <Text style={styles.purple}>Gerenciamento de Liberações</Text>
         <Text style={styles.sectionDescription}>
           Prática de disponibilizar serviços e características novos e
@@ -204,7 +204,7 @@ export default function TelaPraticasServicoITIL() {
         </Text>
       </View>
 
-      <View style={[styles.caixa, { backgroundColor: "aquamarine" }]}>
+      <View style={[styles.caixa, { backgroundColor: "powderblue" }]}>
         <Text style={styles.purple}>
           Monitoramento e Gerenciamento de Eventos
         </Text>
@@ -230,7 +230,7 @@ export default function TelaPraticasServicoITIL() {
         </Text>
       </View>
 
-      <View style={[styles.caixa, { backgroundColor: "aquamarine" }]}>
+      <View style={[styles.caixa, { backgroundColor: "powderblue" }]}>
         <Text style={styles.purple}>Gerenciamento de Incidentes</Text>
         <Text style={styles.sectionDescription}>
           Minimizar o impacto negativo de incidentes restaurando a operação
@@ -242,7 +242,7 @@ export default function TelaPraticasServicoITIL() {
         </Text>
       </View>
 
-      <View style={[styles.caixa, { backgroundColor: "aquamarine" }]}>
+      <View style={[styles.caixa, { backgroundColor: "powderblue" }]}>
         <Text style={styles.purple}>Gerenciamento de Problemas</Text>
         <Text style={styles.sectionDescription}>
           Reduz a probabilidade e o impacto de incidentes por meio da
@@ -260,7 +260,7 @@ export default function TelaPraticasServicoITIL() {
         </Text>
       </View>
 
-      <View style={[styles.caixa, { backgroundColor: "aquamarine" }]}>
+      <View style={[styles.caixa, { backgroundColor: "powderblue" }]}>
         <Text style={styles.purple}>
           Gerenciamento de Requisições de Serviço
         </Text>
@@ -275,7 +275,7 @@ export default function TelaPraticasServicoITIL() {
         </Text>
       </View>
 
-      <View style={[styles.caixa, { backgroundColor: "aquamarine" }]}>
+      <View style={[styles.caixa, { backgroundColor: "powderblue" }]}>
         <Text style={styles.purple}>Central de Serviços </Text>
         <Text style={styles.sectionDescription}>
           Captura a demanda de resolução de incidentes e requisições de serviço.
@@ -290,7 +290,7 @@ export default function TelaPraticasServicoITIL() {
         </Text>
       </View>
 
-      <View style={[styles.caixa, { backgroundColor: "aquamarine" }]}>
+      <View style={[styles.caixa, { backgroundColor: "powderblue" }]}>
         <Text style={styles.purple}>Validação e Testes de Serviço</Text>
         <Text style={styles.sectionDescription}>
           Garante que produtos e serviços novos ou modificados atendam aos
